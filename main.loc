@@ -3,13 +3,21 @@ module bits-py (*)
 import bits
 import root-py
 
-instance Bits a where
-  source Py from "bits.py"
-    ( "morloc_and" as (.&.)
-    , "morloc_or" as (.|.)
-    , "morloc_xor" as (.^.)
-    , "morloc_shiftl" as (<<)
-    , "morloc_shiftr" as (>>)
+instance Bits Int
+       , Bits Int8
+       , Bits Int16
+       , Bits Int32
+       , Bits Int64
+       , Bits UInt8
+       , Bits UInt16
+       , Bits UInt32
+       , Bits UInt64 where
+  %inline source Py from "bits.py"
+    ( (&) as (.&.)
+    , (|) as (.|.)
+    , (^) as (.^.)
+    , (<<) as shiftl
+    , (>>) as shiftr
     , "morloc_bnot" as bnot
     , "morloc_testBit" as testBit
     , "morloc_setBit" as setBit
