@@ -1,0 +1,11 @@
+name: bits-py
+version: 0.1.0
+homepage: https://github.com/morloclib/bits-py
+synopsis: Python implementations for bitwise operations
+description: Python implementations for bitwise operations
+category: data
+license: MIT
+author: "Zebulun Arendsee"
+maintainer: "z@morloc.io"
+github: https://github.com/morloclib/bits-py
+bug-reports: https://github.com/morloclib/bits-py

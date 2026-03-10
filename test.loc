@@ -1,0 +1,4 @@
+module test-bits-py (test)
+
+import bits.test (test)
+import bits-py
